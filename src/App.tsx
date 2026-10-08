@@ -25,7 +25,7 @@ function pub(p: string) {
 const DOCTOR_PHOTO = pub('/opt/главныйэкран-cut.webp');
 const RGMU_PHOTO = pub('/opt/rostgmu.webp');
 const RESIDENCY_PHOTO = pub('/opt/ординатура.webp');
-const OKB_PHOTO = pub('/opt/окб2фото.webp');
+const OKB_PHOTO = pub('/opt/окб2фото-s.webp');
 const SEMYA_PHOTO = pub('/opt/мцсемьятаймлайн.webp');
 const ENDOSCOPY_PHOTO = pub('/endoscopy.webp');
 

@@ -608,32 +608,32 @@ function App() {
           <div className="workplaces-marquee-track">
             <div className="workplace-item">
               <a href="https://rnd.docdoc.ru/doctor/Batigyan_Eduard?ysclid=mutszoegh9107796103" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/logos/sber.svg')} alt="СберЗдоровье" className="workplace-logo" loading="lazy" decoding="async" />
+                <img src={pub('/logos/sber.svg')} alt="СберЗдоровье" className="workplace-logo" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
               <a href="https://prodoctorov.ru/rostov-na-donu/vrach/640407-batigyan/?ysclid=mutszaer1a692710647" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/opt/prodoctorov.webp')} alt="ПроДокторов" className="workplace-logo" loading="lazy" decoding="async" />
+                <img src={pub('/opt/prodoctorov.webp')} alt="ПроДокторов" className="workplace-logo" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
               <a href="https://napopravku.ru/rostov-na-donu/doctor-profile/batigjan-eduard-arsenovich/" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/opt/napopravku.webp')} alt="НаПоправку" className="workplace-logo workplace-logo-lg" loading="lazy" decoding="async" />
+                <img src={pub('/opt/napopravku.webp')} alt="НаПоправку" className="workplace-logo workplace-logo-lg" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
               <a href="https://rostov-ob2.ru/otdelenie-endoskopii/?ysclid=mutuumdzoe91042215" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/opt/обк-2.webp')} alt="ОКБ №2" className="workplace-logo" loading="lazy" decoding="async" />
+                <img src={pub('/opt/обк-2.webp')} alt="ОКБ №2" className="workplace-logo" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
               <a href="https://mc-semya.ru/doktora/endoskopisty/batigyan-eduard-arsenovich/" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/opt/мцсемья.webp')} alt="МЦ «Семья»" className="workplace-logo" loading="lazy" decoding="async" />
+                <img src={pub('/opt/мцсемья.webp')} alt="МЦ «Семья»" className="workplace-logo" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
               <a href="https://doctu.ru/rostov/doctor/batigjan-ehduard-arsenovich?ysclid=mututjkdkk609971304" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/doctu.svg')} alt="Doctu" className="workplace-logo" loading="lazy" decoding="async" />
+                <img src={pub('/doctu.svg')} alt="Doctu" className="workplace-logo" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
@@ -643,32 +643,32 @@ function App() {
             </div>
             <div className="workplace-item">
               <a href="https://rnd.docdoc.ru/doctor/Batigyan_Eduard?ysclid=mutszoegh9107796103" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/logos/sber.svg')} alt="СберЗдоровье" className="workplace-logo" loading="lazy" decoding="async" />
+                <img src={pub('/logos/sber.svg')} alt="СберЗдоровье" className="workplace-logo" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
               <a href="https://prodoctorov.ru/rostov-na-donu/vrach/640407-batigyan/?ysclid=mutszaer1a692710647" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/opt/prodoctorov.webp')} alt="ПроДокторов" className="workplace-logo" loading="lazy" decoding="async" />
+                <img src={pub('/opt/prodoctorov.webp')} alt="ПроДокторов" className="workplace-logo" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
               <a href="https://napopravku.ru/rostov-na-donu/doctor-profile/batigjan-eduard-arsenovich/" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/opt/napopravku.webp')} alt="НаПоправку" className="workplace-logo workplace-logo-lg" loading="lazy" decoding="async" />
+                <img src={pub('/opt/napopravku.webp')} alt="НаПоправку" className="workplace-logo workplace-logo-lg" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
               <a href="https://rostov-ob2.ru/otdelenie-endoskopii/?ysclid=mutuumdzoe91042215" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/opt/обк-2.webp')} alt="ОКБ №2" className="workplace-logo" loading="lazy" decoding="async" />
+                <img src={pub('/opt/обк-2.webp')} alt="ОКБ №2" className="workplace-logo" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
               <a href="https://mc-semya.ru/doktora/endoskopisty/batigyan-eduard-arsenovich/" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/opt/мцсемья.webp')} alt="МЦ «Семья»" className="workplace-logo" loading="lazy" decoding="async" />
+                <img src={pub('/opt/мцсемья.webp')} alt="МЦ «Семья»" className="workplace-logo" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
               <a href="https://doctu.ru/rostov/doctor/batigjan-ehduard-arsenovich?ysclid=mututjkdkk609971304" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/doctu.svg')} alt="Doctu" className="workplace-logo" loading="lazy" decoding="async" />
+                <img src={pub('/doctu.svg')} alt="Doctu" className="workplace-logo" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">

@@ -18,6 +18,10 @@ import { LogoIcon } from './components/Logo';
 import Counter from './components/Counter';
 import CookieBanner from './components/CookieBanner';
 
+function pub(p: string) {
+  return `${import.meta.env.BASE_URL}${p.replace(/^\//, '')}`;
+}
+
 const DOCTOR_PHOTO = pub('/главныйэкран-cut.webp');
 const RGMU_PHOTO = pub('/rostgmu.webp');
 const RESIDENCY_PHOTO = pub('/ординатура.webp');
@@ -33,8 +37,6 @@ const SERVICE_IMAGES = {
   balloon: 'https://image.qwenlm.ai/generated-images/79def8f9-d99d-402f-be49-e00318d20ad8/_result.png',
   gastroplasty: 'https://image.qwenlm.ai/generated-images/5617efb9-4f2c-4a71-a9f4-fa43d766a0ac/_result.png',
 };
-
-const pub = (p: string) => `${import.meta.env.BASE_URL}${p.replace(/^\//, '')}`;
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);

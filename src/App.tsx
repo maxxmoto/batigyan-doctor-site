@@ -22,11 +22,11 @@ function pub(p: string) {
   return `${import.meta.env.BASE_URL}${p.replace(/^\//, '')}`;
 }
 
-const DOCTOR_PHOTO = pub('/главныйэкран-cut.webp');
-const RGMU_PHOTO = pub('/rostgmu.webp');
-const RESIDENCY_PHOTO = pub('/ординатура.webp');
-const OKB_PHOTO = pub('/окб2фото.webp');
-const SEMYA_PHOTO = pub('/мцсемьятаймлайн.webp');
+const DOCTOR_PHOTO = pub('/opt/главныйэкран-cut.webp');
+const RGMU_PHOTO = pub('/opt/rostgmu.webp');
+const RESIDENCY_PHOTO = pub('/opt/ординатура.webp');
+const OKB_PHOTO = pub('/opt/окб2фото.webp');
+const SEMYA_PHOTO = pub('/opt/мцсемьятаймлайн.webp');
 const ENDOSCOPY_PHOTO = pub('/endoscopy.webp');
 
 const SERVICE_IMAGES = {
@@ -168,7 +168,7 @@ function App() {
       {/* Header */}
       <header className={`header ${isHeaderScrolled ? 'scrolled' : ''}`}>
         <a href="#" className="logo">
-          <img src={pub('/newlogobat.webp')} alt="Dr.Batigyan" />
+          <img src={pub('/opt/newlogobat.webp')} alt="Dr.Batigyan" />
         </a>
 
         <nav className="nav">
@@ -613,22 +613,22 @@ function App() {
             </div>
             <div className="workplace-item">
               <a href="https://prodoctorov.ru/rostov-na-donu/vrach/640407-batigyan/?ysclid=mutszaer1a692710647" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/logos/prodoctorov.webp')} alt="ПроДокторов" className="workplace-logo" loading="lazy" decoding="async" />
+                <img src={pub('/opt/prodoctorov.webp')} alt="ПроДокторов" className="workplace-logo" loading="lazy" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
               <a href="https://napopravku.ru/rostov-na-donu/doctor-profile/batigjan-eduard-arsenovich/" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/logos/napopravku.webp')} alt="НаПоправку" className="workplace-logo workplace-logo-lg" loading="lazy" decoding="async" />
+                <img src={pub('/opt/napopravku.webp')} alt="НаПоправку" className="workplace-logo workplace-logo-lg" loading="lazy" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
               <a href="https://rostov-ob2.ru/otdelenie-endoskopii/?ysclid=mutuumdzoe91042215" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/logos/обк-2.webp')} alt="ОКБ №2" className="workplace-logo" loading="lazy" decoding="async" />
+                <img src={pub('/opt/обк-2.webp')} alt="ОКБ №2" className="workplace-logo" loading="lazy" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
               <a href="https://mc-semya.ru/doktora/endoskopisty/batigyan-eduard-arsenovich/" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/logos/мцсемья.webp')} alt="МЦ «Семья»" className="workplace-logo" loading="lazy" decoding="async" />
+                <img src={pub('/opt/мцсемья.webp')} alt="МЦ «Семья»" className="workplace-logo" loading="lazy" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
@@ -648,22 +648,22 @@ function App() {
             </div>
             <div className="workplace-item">
               <a href="https://prodoctorov.ru/rostov-na-donu/vrach/640407-batigyan/?ysclid=mutszaer1a692710647" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/logos/prodoctorov.webp')} alt="ПроДокторов" className="workplace-logo" loading="lazy" decoding="async" />
+                <img src={pub('/opt/prodoctorov.webp')} alt="ПроДокторов" className="workplace-logo" loading="lazy" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
               <a href="https://napopravku.ru/rostov-na-donu/doctor-profile/batigjan-eduard-arsenovich/" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/logos/napopravku.webp')} alt="НаПоправку" className="workplace-logo workplace-logo-lg" loading="lazy" decoding="async" />
+                <img src={pub('/opt/napopravku.webp')} alt="НаПоправку" className="workplace-logo workplace-logo-lg" loading="lazy" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
               <a href="https://rostov-ob2.ru/otdelenie-endoskopii/?ysclid=mutuumdzoe91042215" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/logos/обк-2.webp')} alt="ОКБ №2" className="workplace-logo" loading="lazy" decoding="async" />
+                <img src={pub('/opt/обк-2.webp')} alt="ОКБ №2" className="workplace-logo" loading="lazy" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
               <a href="https://mc-semya.ru/doktora/endoskopisty/batigyan-eduard-arsenovich/" target="_blank" rel="noopener noreferrer">
-                <img src={pub('/logos/мцсемья.webp')} alt="МЦ «Семья»" className="workplace-logo" loading="lazy" decoding="async" />
+                <img src={pub('/opt/мцсемья.webp')} alt="МЦ «Семья»" className="workplace-logo" loading="lazy" decoding="async" />
               </a>
             </div>
             <div className="workplace-item">
@@ -688,7 +688,7 @@ function App() {
           <p>Используются современные эндоскопические системы с технологией <span className="highlight">NBI (narrow band imaging)</span>, позволяющей выявлять изменения слизистой <span className="highlight">на самых ранних стадиях</span>. Это особенно важно для <span className="highlight">профилактики онкологических заболеваний</span>.</p>
           <p><span className="highlight">Чёткие письменные рекомендации</span> по подготовке к исследованию, <span className="highlight">оперативная выдача протокола</span>, <span className="highlight">внимательное отношение к каждому пациенту</span> — то, за что меня рекомендуют коллеги и благодарят пациенты.</p>
         </div>
-        <img src={pub('/философия.webp')} alt="Батигян Эдуард Арсенович" className="approach-photo" />
+        <img src={pub('/opt/философия.webp')} alt="Батигян Эдуард Арсенович" className="approach-photo" />
       </div>
 
       {/* When to Visit Section */}
@@ -804,7 +804,7 @@ function App() {
       </section>
         </div>
         <div className="useful-appointment-right">
-          <img src={pub('/полезныйконтент.webp')} alt="Полезный контент и запись на приём" className="useful-appointment-photo" loading="lazy" decoding="async" />
+          <img src={pub('/opt/полезныйконтент.webp')} alt="Полезный контент и запись на приём" className="useful-appointment-photo" loading="lazy" decoding="async" />
         </div>
         <div className="useful-appointment-app">
 

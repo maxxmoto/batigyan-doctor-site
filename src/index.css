@@ -552,7 +552,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; colo
 }
 
 /* HERO V2 */
-.hero2 { position: relative; margin: 90px 12px 12px; border-radius: 28px; overflow: hidden; background-image: url('/фон.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 557px; display: flex; align-items: center; padding: 60px; }
+.hero2 { position: relative; margin: 90px 12px 12px; border-radius: 28px; overflow: hidden; background-image: url('/opt/фон.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 557px; display: flex; align-items: center; padding: 60px; }
 .hero2::before { display: none; }
 .hero2-pattern { display: none; }
 .hero2-content { position: relative; z-index: 3; max-width: 600px; margin-left: 44px; }
@@ -570,7 +570,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; colo
 .hero2-photo::after { display: none; }
 
 @media (max-width: 768px) {
-  .hero2 { margin: 78px 12px 12px; min-height: 550px; padding: 28px 22px 0; align-items: flex-start; background-image: url('/фонмобилка.webp'); background-position: center top; }
+  .hero2 { margin: 78px 12px 12px; min-height: 550px; padding: 28px 22px 0; align-items: flex-start; background-image: url('/opt/фонмобилка.webp'); background-position: center top; }
   .hero2-content { max-width: 100%; margin-left: 0; }
   .hero2-badge { font-size: 10px; padding: 7px 12px; margin-bottom: 16px; }
   .hero2-title { font-size: 30px; margin-bottom: 22px; }

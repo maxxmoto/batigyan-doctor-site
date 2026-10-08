@@ -27,15 +27,15 @@ const RGMU_PHOTO = pub('/rostgmu.webp');
 const RESIDENCY_PHOTO = pub('/ординатура.webp');
 const OKB_PHOTO = pub('/окб2фото.webp');
 const SEMYA_PHOTO = pub('/мцсемьятаймлайн.webp');
-const ENDOSCOPY_PHOTO = 'https://image.qwenlm.ai/generated-images/7633e1d9-acac-4157-9087-8faf8c8f470c/_result.png';
+const ENDOSCOPY_PHOTO = pub('/endoscopy.webp');
 
 const SERVICE_IMAGES = {
-  consultation: 'https://image.qwenlm.ai/generated-images/e4b3e5d9-d46c-40fb-a28d-d2cc49105fbd/_result.png',
-  gastroscopy: 'https://image.qwenlm.ai/generated-images/2c098be7-19ee-4039-8e08-c962101c4541/_result.png',
-  colonoscopy: 'https://image.qwenlm.ai/generated-images/bd09062b-952b-481c-ab7f-c8b13c17084c/_result.png',
-  polyps: 'https://image.qwenlm.ai/generated-images/a17e9859-7616-45c0-a275-0750eeef4975/_result.png',
-  balloon: 'https://image.qwenlm.ai/generated-images/79def8f9-d99d-402f-be49-e00318d20ad8/_result.png',
-  gastroplasty: 'https://image.qwenlm.ai/generated-images/5617efb9-4f2c-4a71-a9f4-fa43d766a0ac/_result.png',
+  consultation: pub('/services/consultation.webp'),
+  gastroscopy: pub('/services/gastroscopy.webp'),
+  colonoscopy: pub('/services/colonoscopy.webp'),
+  polyps: pub('/services/polyps.webp'),
+  balloon: pub('/services/balloon.webp'),
+  gastroplasty: pub('/services/gastroplasty.webp'),
 };
 
 function App() {

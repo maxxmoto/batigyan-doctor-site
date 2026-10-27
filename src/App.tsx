@@ -688,7 +688,7 @@ function App() {
           <p>Используются современные эндоскопические системы с технологией <span className="highlight">NBI (narrow band imaging)</span>, позволяющей выявлять изменения слизистой <span className="highlight">на самых ранних стадиях</span>. Это особенно важно для <span className="highlight">профилактики онкологических заболеваний</span>.</p>
           <p><span className="highlight">Чёткие письменные рекомендации</span> по подготовке к исследованию, <span className="highlight">оперативная выдача протокола</span>, <span className="highlight">внимательное отношение к каждому пациенту</span> — то, за что меня рекомендуют коллеги и благодарят пациенты.</p>
         </div>
-        <img src={pub('/opt/философия.webp')} alt="Батигян Эдуард Арсенович" className="approach-photo" />
+        <img src={pub('/opt/f_batigyan-mirror.webp')} alt="Батигян Эдуард Арсенович" className="approach-photo" />
       </div>
 
       {/* When to Visit Section */}

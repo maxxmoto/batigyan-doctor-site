@@ -22,7 +22,7 @@ function pub(p: string) {
   return `${import.meta.env.BASE_URL}${p.replace(/^\//, '')}`;
 }
 
-const DOCTOR_PHOTO = pub('/opt/f_batigyan.webp');
+const DOCTOR_PHOTO = pub('/opt/главныйэкран-cut.webp');
 const RGMU_PHOTO = pub('/opt/rostgmu.webp');
 const RESIDENCY_PHOTO = pub('/opt/ординатура.webp');
 const OKB_PHOTO = pub('/opt/окб2фото-s.webp');

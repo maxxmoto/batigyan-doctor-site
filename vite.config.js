@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => {
       {
         name: "inject-lcp-preload",
         transformIndexHtml(html) {
-          const link = `<link rel="preload" as="image" href="${base}opt/f_batigyan.webp" fetchpriority="high">`;
+          const link = `<link rel="preload" as="image" href="${base}opt/главныйэкран-cut.webp" fetchpriority="high">`;
           return html.replace("</head>", `${link}\n  </head>`);
         },
       },

@@ -137,7 +137,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; colo
 .approach-content { max-width: 1400px; margin: 0 auto; position: relative; z-index: 2; }
 .approach-section .section-title { color: #fff; font-size: 48px; margin-bottom: 32px; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
 .approach-section p { font-size: 19px; line-height: 1.8; color: rgba(255,255,255,0.95); margin-bottom: 20px; max-width: 850px; font-weight: 300; }
-.approach-photo { position: absolute; top: 0; right: 0; bottom: 0; height: 100%; width: auto; z-index: 1; pointer-events: none; transform: scale(1.15); transform-origin: right bottom; filter: drop-shadow(0 10px 24px rgba(15,118,110,0.35)); }
+.approach-photo { position: absolute; top: 0; right: 0; bottom: 0; height: 100%; width: auto; max-width: 100%; object-fit: contain; object-position: right bottom; z-index: 1; pointer-events: none; transform: none; filter: drop-shadow(0 10px 24px rgba(15,118,110,0.35)); }
 
 /* WHEN TO VISIT */
 .when-visit { background: #f8f9fa; padding: 80px 40px; }

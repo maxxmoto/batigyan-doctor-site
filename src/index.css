@@ -566,7 +566,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; colo
 .hero2-stat { display: flex; flex-direction: column; }
 .hero2-stat-num { color: #fff; font-size: 24px; font-weight: 900; line-height: 1; }
 .hero2-stat-lbl { color: rgba(255,255,255,0.7); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 6px; }
-.hero2-photo { position: absolute; right: 44px; left: auto; bottom: 0; width: 46%; height: 96%; z-index: 2; }
+.hero2-photo { position: absolute; right: 44px; left: auto; bottom: 12px; width: 46%; height: 94%; z-index: 2; }
 .hero2-photo img { width: 100%; height: 100%; object-fit: contain; object-position: right bottom; display: block; }
 .hero2-photo::after { display: none; }
 
@@ -580,7 +580,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; colo
   .hero2-stats { gap: 18px; margin-top: 24px; }
   .hero2-stat-num { font-size: 18px; }
   .hero2-stat-lbl { font-size: 10px; }
-  .hero2-photo { width: 96%; height: 80%; left: 50%; right: auto; bottom: 0; transform: translateX(-44%); }
+  .hero2-photo { width: 96%; height: 78%; left: 50%; right: auto; bottom: 10px; transform: translateX(-44%); }
   .hero2-photo img { object-position: center bottom; }
   .hero2-photo::after { display: none; }
 }

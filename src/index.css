@@ -396,10 +396,10 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; colo
   .approach-section { margin: 0 12px; padding: 48px 28px 320px; border-radius: 24px; box-shadow: 0 12px 40px rgba(15,118,110,0.2); }
   .approach-section .section-title { font-size: 38px; margin-bottom: 24px; }
   .approach-content { max-width: 100%; margin: 0; padding-left: 0; padding-right: 0; }
-  .approach-photo { left: auto; right: 0; }
+  .approach-photo { left: 0; right: auto; }
   .approach-section p { font-size: 17px; line-height: 1.8; margin-bottom: 24px; }
   .approach-section p:nth-of-type(n+2) { display: none; }
-  .approach-photo { position: absolute; top: auto; right: 0; bottom: 0; left: auto; transform: none; height: 300px; width: auto; max-width: none; margin: 0; display: block; }
+  .approach-photo { position: absolute; top: auto; left: 0; right: auto; bottom: 0; transform: none; height: 300px; width: auto; max-width: none; margin: 0; display: block; object-fit: contain; object-position: left bottom; }
 
   .when-visit { padding: 48px 20px; }
   .symptoms-list { grid-template-columns: 1fr; gap: 12px; }

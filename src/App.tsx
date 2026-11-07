@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   StethoscopeIcon,
   EndoscopeIcon,
@@ -59,6 +59,8 @@ function App() {
   const [showAllServices, setShowAllServices] = useState(false);
   const [isDesktop, setIsDesktop] = useState(() => window.innerWidth > 768);
   const [hasAnimated, setHasAnimated] = useState(false);
+  const [isHeroVisible, setIsHeroVisible] = useState(true);
+  const heroRef = useRef<HTMLElement | null>(null);
   const totalSlides = 5;
   const visibleServicesCount = 6;
 
@@ -122,6 +124,19 @@ function App() {
     observer.observe(section);
     return () => observer.disconnect();
   }, [hasAnimated]);
+
+  useEffect(() => {
+    const hero = heroRef.current;
+    if (!hero) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsHeroVisible(entry.isIntersecting),
+      { threshold: 0 }
+    );
+
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, []);
 
   const openContact = (topic?: string) => {
     setContactTopic(topic ?? null);
@@ -213,7 +228,7 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section className="hero2">
+      <section className="hero2" ref={heroRef}>
         <div className="hero2-pattern" aria-hidden="true"></div>
         <div className="hero2-content">
           <span className="hero2-badge">Батигян Эдуард Арсенович</span>
@@ -945,7 +960,7 @@ function App() {
 
       <a
         href={MAX_URL}
-        className="fab-max"
+        className={`fab-max ${isHeroVisible ? 'fab-max-hidden' : ''}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Написать в MAX"

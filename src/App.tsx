@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   StethoscopeIcon,
   EndoscopeIcon,
@@ -22,12 +22,13 @@ function pub(p: string) {
   return `${import.meta.env.BASE_URL}${p.replace(/^\//, '')}`;
 }
 
-const DOCTOR_PHOTO = pub('/opt/photo_1.webp');
+const HERO_PHOTO_PC = pub('/opt/ge-pc.webp');
+const HERO_PHOTO_MOBILE = pub('/opt/ge-mobil.webp');
 const RGMU_PHOTO = pub('/opt/rostgmu.webp');
 const RESIDENCY_PHOTO = pub('/opt/ординатура.webp');
 const OKB_PHOTO = pub('/opt/окб2фото-s.webp');
 const SEMYA_PHOTO = pub('/opt/мцсемьятаймлайн.webp');
-const ENDOSCOPY_PHOTO = pub('/endoscopy.webp');
+const PEREPODGOTOVKA_PHOTO = pub('/opt/perepodgotovka.webp');
 
 const SERVICE_IMAGES = {
   consultation: pub('/services/consultation.webp'),
@@ -38,8 +39,19 @@ const SERVICE_IMAGES = {
   gastroplasty: pub('/services/gastroplasty.webp'),
 };
 
+const TELEGRAM_URL = 'https://t.me/batigyan_endo';
+const MAX_URL = 'https://max.ru/u/f9LHodD0cOJPGilNyVfMv0n0R3AXhpbzTFuuaHeTdcWnMgAvEP31w_zxEZQ';
+
+function telegramLink(topic?: string | null) {
+  const message = topic
+    ? `Здравствуйте, Эдуард Арсенович! Пишу с сайта. Меня беспокоит: ${topic}. Хочу записаться на консультацию.`
+    : 'Здравствуйте, Эдуард Арсенович! Пишу с сайта. Хочу записаться на консультацию.';
+  return `${TELEGRAM_URL}?text=${encodeURIComponent(message)}`;
+}
+
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const [contactTopic, setContactTopic] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isHeaderScrolled, setIsHeaderScrolled] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -47,9 +59,6 @@ function App() {
   const [showAllServices, setShowAllServices] = useState(false);
   const [isDesktop, setIsDesktop] = useState(() => window.innerWidth > 768);
   const [hasAnimated, setHasAnimated] = useState(false);
-  const [toast, setToast] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
-  const [success, setSuccess] = useState<{ name: string; phone: string } | null>(null);
-  const toastTimer = useRef<number | undefined>(undefined);
   const totalSlides = 5;
   const visibleServicesCount = 6;
 
@@ -114,15 +123,15 @@ function App() {
     return () => observer.disconnect();
   }, [hasAnimated]);
 
-  const openModal = () => {
-    setIsModalOpen(true);
-    setSuccess(null);
+  const openContact = (topic?: string) => {
+    setContactTopic(topic ?? null);
+    setIsContactOpen(true);
     document.body.style.overflow = 'hidden';
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSuccess(null);
+  const closeContact = () => {
+    setIsContactOpen(false);
+    setContactTopic(null);
     document.body.style.overflow = '';
   };
 
@@ -134,29 +143,6 @@ function App() {
     setIsMobileMenuOpen(false);
   };
 
-  const showToast = (type: 'success' | 'error', text: string) => {
-    setToast({ type, text });
-    window.clearTimeout(toastTimer.current);
-    toastTimer.current = window.setTimeout(() => setToast(null), 4500);
-  };
-
-  const handleSubmit = () => {
-    const name = (document.getElementById('modalName') as HTMLInputElement)?.value || '';
-    const phone = (document.getElementById('modalPhone') as HTMLInputElement)?.value || '';
-    const consent = (document.getElementById('modalConsent') as HTMLInputElement)?.checked;
-    if (!name || !phone) {
-      showToast('error', 'Пожалуйста, заполните имя и телефон.');
-      return;
-    }
-    if (!consent) {
-      showToast('error', 'Необходимо согласие с политикой конфиденциальности.');
-      return;
-    }
-    setSuccess({ name, phone });
-    if (document.getElementById('modalName')) (document.getElementById('modalName') as HTMLInputElement).value = '';
-    if (document.getElementById('modalPhone')) (document.getElementById('modalPhone') as HTMLInputElement).value = '';
-    if (document.getElementById('modalConsent')) (document.getElementById('modalConsent') as HTMLInputElement).checked = false;
-  };
   const toggleSymptom = (index: number) => {
     setSelectedSymptoms((prev) =>
       prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
@@ -181,29 +167,29 @@ function App() {
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <div className="header-contacts">
-            <a href="tel:+7хххххххххх" className="header-phone">
+            <a href="tel:+79604593383" className="header-phone">
               <PhoneIcon />
-              +7 ххх хххх хх
+              +7 960 459-33-83
             </a>
             <div className="header-socials">
-              <a href="#" className="header-social" aria-label="MAX">
-                <img src={pub('/макс.svg')} alt="MAX" />
+              <a href={MAX_URL} className="header-social" aria-label="MAX" target="_blank" rel="noopener noreferrer">
+                <img src={pub('/max.webp')} alt="MAX" />
               </a>
-              <a href="#" className="header-social" aria-label="Telegram">
+              <a href={TELEGRAM_URL} className="header-social" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
                 <img src={pub('/telegram.webp')} alt="Telegram" />
               </a>
             </div>
           </div>
-          <a href="#" className="header-max" aria-label="MAX">
-            <img src={pub('/макс.svg')} alt="MAX" />
+          <a href={MAX_URL} className="header-max" aria-label="MAX" target="_blank" rel="noopener noreferrer">
+            <img src={pub('/max.webp')} alt="MAX" />
           </a>
           <a
             href="#"
             className="btn-appointment"
-            onClick={(e) => { e.preventDefault(); openModal(); }}
+            onClick={(e) => { e.preventDefault(); openContact(); }}
           >
-            <span className="btn-full">ЗАПИСАТЬСЯ</span>
-            <span className="btn-short">Запись</span>
+            <span className="btn-full">СВЯЗАТЬСЯ</span>
+            <span className="btn-short">Связь</span>
           </a>
 
           <button
@@ -248,19 +234,22 @@ function App() {
           </div>
         </div>
         <div className="hero2-photo">
-          <img
-            src={DOCTOR_PHOTO}
-            alt="Батигян Эдуард Арсенович — врач-эндоскопист"
-            fetchPriority="high"
-            decoding="async"
-          />
+          <picture>
+            <source media="(max-width: 768px)" srcSet={HERO_PHOTO_MOBILE} />
+            <img
+              src={HERO_PHOTO_PC}
+              alt="Батигян Эдуард Арсенович — врач-эндоскопист"
+              fetchPriority="high"
+              decoding="async"
+            />
+          </picture>
         </div>
       </section>
 
       {/* Consultation Banner */}
       <div className="consultation-banner">
         <h2>КОНСУЛЬТАЦИЯ</h2>
-        <button className="arrow-btn" onClick={openModal} aria-label="Записаться">
+        <button className="arrow-btn" onClick={() => openContact()} aria-label="Связаться с врачом">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <line x1="7" y1="7" x2="17" y2="17"></line>
             <polyline points="17 7 17 17 7 17"></polyline>
@@ -316,7 +305,7 @@ function App() {
               <div className="timeline-card">
                 <div className="timeline-card-icon"><GraduationCapIcon /></div>
                 <div className="timeline-card-image">
-                  <img src={ENDOSCOPY_PHOTO} alt="Переподготовка по эндоскопии" loading="lazy" decoding="async" />
+                  <img src={PEREPODGOTOVKA_PHOTO} alt="Переподготовка по эндоскопии" loading="lazy" decoding="async" />
                 </div>
                 <div className="timeline-card-body">
                   <span className="timeline-year">2015</span>
@@ -402,7 +391,7 @@ function App() {
               <div className="timeline-card">
                 <div className="timeline-card-icon"><GraduationCapIcon /></div>
                 <div className="timeline-card-image">
-                  <img src={ENDOSCOPY_PHOTO} alt="Переподготовка по эндоскопии" loading="lazy" decoding="async" />
+                  <img src={PEREPODGOTOVKA_PHOTO} alt="Переподготовка по эндоскопии" loading="lazy" decoding="async" />
                 </div>
                 <div className="timeline-card-body">
                   <span className="timeline-year">2015</span>
@@ -688,7 +677,7 @@ function App() {
           <p>Используются современные эндоскопические системы с технологией <span className="highlight">NBI (narrow band imaging)</span>, позволяющей выявлять изменения слизистой <span className="highlight">на самых ранних стадиях</span>. Это особенно важно для <span className="highlight">профилактики онкологических заболеваний</span>.</p>
           <p><span className="highlight">Чёткие письменные рекомендации</span> по подготовке к исследованию, <span className="highlight">оперативная выдача протокола</span>, <span className="highlight">внимательное отношение к каждому пациенту</span> — то, за что меня рекомендуют коллеги и благодарят пациенты.</p>
         </div>
-        <img src={pub('/opt/photo_2.webp')} alt="Батигян Эдуард Арсенович" className="approach-photo" />
+        <img src={pub('/photo_2.png')} alt="Батигян Эдуард Арсенович" className="approach-photo" />
       </div>
 
       {/* When to Visit Section */}
@@ -701,7 +690,7 @@ function App() {
               <div
                 key={index}
                 className={`symptom-item ${selectedSymptoms.includes(index) ? 'selected' : ''}`}
-                onClick={() => { toggleSymptom(index); openModal(); }}
+                onClick={() => { toggleSymptom(index); openContact(symptom); }}
               >
                 <span className={`check symptom-check-${index} ${selectedSymptoms.includes(index) ? 'permanent' : ''}`}>
                   <CheckIcon />
@@ -773,7 +762,7 @@ function App() {
           <h2 className="section-title">Полезный контент</h2>
           <p className="section-subtitle">Подписывайтесь на мои социальные сети, где я делюсь полезной информацией о здоровье ЖКТ и профилактике заболеваний.</p>
           <div className="social-buttons">
-            <a href="#" className="social-button social-button-telegram">
+            <a href="https://t.me/batigyan_endo" className="social-button social-button-telegram" target="_blank" rel="noopener noreferrer">
               <svg className="social-icon" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
               </svg>
@@ -785,7 +774,7 @@ function App() {
               </svg>
               <span>ВКонтакте</span>
             </a>
-            <a href="tel:+7хххххххххх" className="social-button social-button-phone">
+            <a href="tel:+79604593383" className="social-button social-button-phone">
               <PhoneIcon className="social-icon" />
               <span>Телефон</span>
             </a>
@@ -808,16 +797,23 @@ function App() {
         </div>
         <div className="useful-appointment-app">
 
-      {/* Appointment Section */}
+      {/* Contact Section */}
       <section className="appointment-section" id="contacts">
-        <h2 className="section-title">Запись на приём</h2>
-        <p>Записаться на консультацию, гастроскопию, колоноскопию с NBI или удаление полипов можно по телефону.</p>
+        <h2 className="section-title">Связь с врачом</h2>
+        <p>Выберите удобный мессенджер — я отвечу лично. В Telegram сообщение уже будет готово, останется только отправить.</p>
         <div className="appointment-buttons">
-          <a href="tel:+7хххххххххх" className="btn-pill btn-pill-primary">
-            <PhoneIcon />
-            Запись — +7 ххх хххх хх
+          <a href={telegramLink()} target="_blank" rel="noopener noreferrer" className="btn-pill contact-pill contact-pill-telegram">
+            <img src={pub('/telegram.webp')} alt="" className="contact-pill-icon" />
+            Написать в Telegram
+          </a>
+          <a href={MAX_URL} target="_blank" rel="noopener noreferrer" className="btn-pill contact-pill contact-pill-max">
+            <img src={pub('/max.webp')} alt="" className="contact-pill-icon" />
+            Написать в MAX
           </a>
         </div>
+        <p className="contact-phone-note">
+          Или позвоните: <a href="tel:+79604593383">+7 960 459-33-83</a>
+        </p>
       </section>
         </div>
       </div>
@@ -854,7 +850,7 @@ function App() {
               <p itemProp="addressLocality">Ростов-на-Дону</p>
               <p>МЦ «Семья», ул. Дачная, 8</p>
               <p>ОКБ №2, ул. 1-й Конной Армии, 33</p>
-              <p><a href="tel:+7хххххххххх" itemProp="telephone">+7 ххх хххх хх</a></p>
+              <p><a href="tel:+79604593383" itemProp="telephone">+7 960 459-33-83</a></p>
               <p style={{ marginTop: '8px' }}>
                 <a href="mailto:info@batigyan.ru" itemProp="email">info@batigyan.ru</a>
               </p>
@@ -905,43 +901,41 @@ function App() {
         </div>
       </footer>
 
-      {/* Modal */}
-      {isModalOpen && (
-        <div className="modal-overlay" onClick={(e) => { if (e.target === e.currentTarget) closeModal(); }}>
-          <div className="modal">
-            <button className="modal-close" onClick={closeModal} aria-label="Закрыть">
+      {/* Contact modal */}
+      {isContactOpen && (
+        <div className="modal-overlay" onClick={(e) => { if (e.target === e.currentTarget) closeContact(); }}>
+          <div className="modal contact-modal">
+            <button className="modal-close" onClick={closeContact} aria-label="Закрыть">
               <CloseIcon />
             </button>
-            {success ? (
-              <div className="modal-success">
-                <div className="modal-success-icon"><CheckIcon /></div>
-                <h3>Заявка отправлена!</h3>
-                <p className="modal-success-text">
-                  Спасибо, {success.name}! Мы свяжемся с вами по номеру {success.phone} в ближайшее время.
-                </p>
-                <button className="modal-submit" onClick={closeModal}>Хорошо</button>
-              </div>
-            ) : (
-              <>
-                <h3>Запись на приём</h3>
-                <input type="text" placeholder="Ваше имя" id="modalName" />
-                <input type="tel" placeholder="Телефон" id="modalPhone" />
-                <label className="modal-consent">
-                  <input type="checkbox" id="modalConsent" />
-                  <span>Я согласен(на) на <a href="/consent.html" target="_blank" rel="noopener noreferrer">обработку моих персональных данных</a> и с <a href="/privacy.html" target="_blank" rel="noopener noreferrer">Политикой в отношении обработки и защиты персональных данных</a></span>
-                </label>
-                <button className="modal-submit" onClick={handleSubmit}>Отправить заявку</button>
-              </>
-            )}
+            <h3>Связаться с врачом</h3>
+            <p className="contact-modal-subtitle">
+              {contactTopic
+                ? 'Выберите удобный мессенджер — сообщение о вашей проблеме уже готово.'
+                : 'Выберите удобный мессенджер — я отвечу лично.'}
+            </p>
+            <div className="contact-channels">
+              <a href={telegramLink(contactTopic)} target="_blank" rel="noopener noreferrer" className="contact-channel">
+                <img src={pub('/telegram.webp')} alt="" className="contact-channel-icon" />
+                <span className="contact-channel-text">
+                  <strong>Telegram</strong>
+                  <small>Сообщение уже готово — просто отправьте</small>
+                </span>
+                <ArrowIcon className="contact-channel-arrow" />
+              </a>
+              <a href={MAX_URL} target="_blank" rel="noopener noreferrer" className="contact-channel">
+                <img src={pub('/max.webp')} alt="" className="contact-channel-icon" />
+                <span className="contact-channel-text">
+                  <strong>MAX</strong>
+                  <small>Открыть чат с врачом</small>
+                </span>
+                <ArrowIcon className="contact-channel-arrow" />
+              </a>
+            </div>
+            <p className="contact-modal-note">
+              Или позвоните: <a href="tel:+79604593383">+7 960 459-33-83</a>
+            </p>
           </div>
-        </div>
-      )}
-
-      {/* Custom notification */}
-      {toast && (
-        <div className={`toast toast-${toast.type}`} role="status">
-          <span className="toast-icon">{toast.type === 'success' ? <CheckIcon /> : <CloseIcon />}</span>
-          <span className="toast-text">{toast.text}</span>
         </div>
       )}
 

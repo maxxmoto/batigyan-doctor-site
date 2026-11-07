@@ -12,7 +12,8 @@ export default defineConfig(({ mode }) => {
         name: "inject-lcp-preload",
         transformIndexHtml(html) {
           const link = `<link rel="preload" as="image" href="${base}opt/ge-pc.webp" media="(min-width: 769px)" fetchpriority="high">\n  <link rel="preload" as="image" href="${base}opt/ge-mobil.webp" media="(max-width: 768px)" fetchpriority="high">`;
-          return html.replace("</head>", `${link}\n  </head>`);
+          const noindex = mode === "gh-pages" ? `\n  <meta name="robots" content="noindex, nofollow">` : "";
+          return html.replace("</head>", `${link}${noindex}\n  </head>`);
         },
       },
     ],

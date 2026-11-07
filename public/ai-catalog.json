@@ -1,0 +1,29 @@
+{
+  "name": "Батигян Эдуард Арсенович — врач-эндоскопист",
+  "url": "https://batigyan-endoscopy.ru/",
+  "description": "Врач-эндоскопист в Ростове-на-Дону, стаж 15 лет, первая категория. Гастроскопия и колоноскопия с NBI, удаление полипов, лечение ожирения (ESG), ЭРХПГ.",
+  "type": "website",
+  "inLanguage": "ru-RU",
+  "contact": {
+    "telephone": "+79604593383",
+    "email": "info@batigyan.ru"
+  },
+  "sameAs": [
+    "https://t.me/batigyan_endo",
+    "https://prodoctorov.ru/rostov-na-donu/vrach/640407-batigyan/",
+    "https://rnd.docdoc.ru/doctor/Batigyan_Eduard",
+    "https://napopravku.ru/rostov-na-donu/doctor-profile/batigjan-eduard-arsenovich/"
+  ],
+  "services": [
+    "Гастроскопия (ЭГДС) с NBI",
+    "Колоноскопия с NBI",
+    "Удаление полипов и аденом",
+    "ЭРХПГ и лечение холедохолитиаза",
+    "Лечение ожирения (ESG)",
+    "Остановка кровотечений ЖКТ",
+    "Стентирование и дилатация пищевода",
+    "Лечение ахалазии кардии (ПОЭМ)",
+    "Ургентная эндоскопия",
+    "Лечение пищевода Барретта"
+  ]
+}

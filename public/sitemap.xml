@@ -1,9 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://batigyan-endoscopy.ru/</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+
+    <image:image>
+      <image:loc>https://batigyan-endoscopy.ru/opt/ge-pc.webp</image:loc>
+      <image:title>Батигян Эдуард Арсенович — врач-эндоскопист в Ростове-на-Дону</image:title>
+      <image:caption>Батигян Эдуард Арсенович, врач-эндоскопист, Ростов-на-Дону</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://batigyan-endoscopy.ru/opt/ge-mobil.webp</image:loc>
+      <image:title>Батигян Эдуард Арсенович — врач-эндоскопист</image:title>
+      <image:caption>Батигян Эдуард Арсенович, врач-эндоскопист</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://batigyan-endoscopy.ru/my-philosophy.webp</image:loc>
+      <image:title>Батигян Эдуард Арсенович — эндоскопист в Ростове-на-Дону</image:title>
+      <image:caption>Врач-эндоскопист Батигян Эдуард Арсенович</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://batigyan-endoscopy.ru/opt/og-share.png</image:loc>
+      <image:title>Батигян Эдуард Арсенович — врач-эндоскопист</image:title>
+      <image:caption>Батигян Эдуард Арсенович, врач-эндоскопист в Ростове-на-Дону</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://batigyan-endoscopy.ru/opt/rostgmu.webp</image:loc>
+      <image:title>Ростовский государственный медицинский университет</image:title>
+      <image:caption>РостГМУ — базовое образование Батигяна Э.А.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://batigyan-endoscopy.ru/opt/ординатура.webp</image:loc>
+      <image:title>Ординатура по хирургии</image:title>
+      <image:caption>Ординатура Батигяна Э.А. в РостГМУ</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://batigyan-endoscopy.ru/opt/окб2фото-s.webp</image:loc>
+      <image:title>ГБУ РО «ОКБ №2» — отделение эндоскопии</image:title>
+      <image:caption>Областная клиническая больница №2, Ростов-на-Дону</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://batigyan-endoscopy.ru/opt/мцсемьятаймлайн.webp</image:loc>
+      <image:title>МЦ «Семья» — медицинский центр в Ростове-на-Дону</image:title>
+      <image:caption>МЦ «Семья», ул. Дачная, 8</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://batigyan-endoscopy.ru/opt/perepodgotovka.webp</image:loc>
+      <image:title>Переподготовка по эндоскопии</image:title>
+      <image:caption>Цикл переподготовки «Эндоскопия», РостГМУ</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://batigyan-endoscopy.ru/services/consultation.webp</image:loc>
+      <image:title>Консультация врача-эндоскописта</image:title>
+      <image:caption>Консультация эндоскописта в Ростове-на-Дону</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://batigyan-endoscopy.ru/services/gastroscopy.webp</image:loc>
+      <image:title>Гастроскопия с NBI</image:title>
+      <image:caption>Гастроскопия (ЭГДС) с NBI в Ростове-на-Дону</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://batigyan-endoscopy.ru/services/colonoscopy.webp</image:loc>
+      <image:title>Колоноскопия с NBI</image:title>
+      <image:caption>Колоноскопия с NBI в Ростове-на-Дону</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://batigyan-endoscopy.ru/services/polyps.webp</image:loc>
+      <image:title>Удаление полипов и аденом</image:title>
+      <image:caption>Эндоскопическое удаление полипов и аденом</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://batigyan-endoscopy.ru/services/balloon.webp</image:loc>
+      <image:title>Внутрижелудочный баллон</image:title>
+      <image:caption>Лечение ожирения внутрижелудочным баллоном</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://batigyan-endoscopy.ru/services/gastroplasty.webp</image:loc>
+      <image:title>ESG — эндоскопическая рукавная гастропластика</image:title>
+      <image:caption>Лечение ожирения методом ESG</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://batigyan-endoscopy.ru/opt/полезныйконтент.webp</image:loc>
+      <image:title>Полезный контент и запись к врачу</image:title>
+      <image:caption>Батигян Эдуард Арсенович — эндоскопист</image:caption>
+    </image:image>
   </url>
 </urlset>

@@ -800,7 +800,7 @@ function App() {
       {/* Contact Section */}
       <section className="appointment-section" id="contacts">
         <h2 className="section-title">Связь с врачом</h2>
-        <p>Выберите удобный мессенджер — я отвечу лично. В Telegram сообщение уже будет готово, останется только отправить.</p>
+        <p>Выберите удобный мессенджер — я отвечу лично.</p>
         <div className="appointment-buttons">
           <a href={telegramLink()} target="_blank" rel="noopener noreferrer" className="btn-pill contact-pill contact-pill-telegram">
             <img src={pub('/telegram.webp')} alt="" className="contact-pill-icon" />
@@ -911,7 +911,7 @@ function App() {
             <h3>Связаться с врачом</h3>
             <p className="contact-modal-subtitle">
               {contactTopic
-                ? 'Выберите удобный мессенджер — сообщение о вашей проблеме уже готово.'
+                ? 'Напишите о своей проблеме — я отвечу лично.'
                 : 'Выберите удобный мессенджер — я отвечу лично.'}
             </p>
             <div className="contact-channels">
@@ -919,7 +919,7 @@ function App() {
                 <img src={pub('/telegram.webp')} alt="" className="contact-channel-icon" />
                 <span className="contact-channel-text">
                   <strong>Telegram</strong>
-                  <small>Сообщение уже готово — просто отправьте</small>
+                  <small>Свяжитесь со мной в Telegram</small>
                 </span>
                 <ArrowIcon className="contact-channel-arrow" />
               </a>

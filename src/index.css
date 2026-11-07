@@ -613,3 +613,17 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; colo
   .appointment-section > p { font-size: 17px; }
   .footer p, .footer a { font-size: 16px; }
 }
+
+/* Philosophy photo as full background on mobile */
+@media (max-width: 768px) {
+  .approach-section {
+    background-image:
+      linear-gradient(180deg, rgba(15,118,110,0.78) 0%, rgba(15,118,110,0.62) 55%, rgba(15,118,110,0.84) 100%),
+      url('/my-philosophy.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-bottom: 48px;
+  }
+  .approach-photo { display: none; }
+}

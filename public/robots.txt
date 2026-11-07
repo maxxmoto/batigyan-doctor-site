@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://batigyan-endoscopy.ru/sitemap.xml

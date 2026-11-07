@@ -248,7 +248,7 @@ function App() {
 
       {/* Consultation Banner */}
       <div className="consultation-banner">
-        <h2>КОНСУЛЬТАЦИЯ</h2>
+        <h2>НАПИСАТЬ МНЕ</h2>
         <button className="arrow-btn" onClick={() => openContact()} aria-label="Связаться с врачом">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <line x1="7" y1="7" x2="17" y2="17"></line>

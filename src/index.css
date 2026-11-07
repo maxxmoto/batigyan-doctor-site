@@ -619,7 +619,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; colo
   .approach-section {
     background-image:
       linear-gradient(180deg, rgba(15,118,110,0.78) 0%, rgba(15,118,110,0.62) 55%, rgba(15,118,110,0.84) 100%),
-      url('/my-philosophy.png');
+      url('/my-philosophy.webp');
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;

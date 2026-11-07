@@ -774,6 +774,10 @@ function App() {
               </svg>
               <span>ВКонтакте</span>
             </a>
+            <a href={MAX_URL} className="social-button social-button-max" target="_blank" rel="noopener noreferrer">
+              <img src={pub('/max.webp')} alt="MAX" className="social-icon" />
+              <span>MAX</span>
+            </a>
             <a href="tel:+79604593383" className="social-button social-button-phone">
               <PhoneIcon className="social-icon" />
               <span>Телефон</span>

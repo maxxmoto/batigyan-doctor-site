@@ -627,3 +627,10 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; colo
   }
   .approach-photo { display: none; }
 }
+
+/* Show MAX instead of VK on mobile */
+.social-button-max { display: none; }
+@media (max-width: 768px) {
+  .social-button-max { display: inline-flex; }
+  .social-button-vk { display: none; }
+}

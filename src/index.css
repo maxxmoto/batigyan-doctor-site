@@ -23,8 +23,8 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; colo
 .header-social { display: inline-flex; width: 34px; height: 34px; border-radius: 50%; align-items: center; justify-content: center; background: transparent; transition: transform 0.2s; }
 .header-social:hover { transform: translateY(-1px) scale(1.08); }
 .header-social img { width: 26px; height: 26px; display: block; }
-.header-max { display: none; width: 36px; height: 36px; border-radius: 50%; align-items: center; justify-content: center; background: transparent; text-decoration: none; }
-.header-max img { width: 28px; height: 28px; display: block; }
+.header-call { display: none; width: 36px; height: 36px; border-radius: 50%; align-items: center; justify-content: center; background: transparent; text-decoration: none; color: #0F766E; }
+.header-call svg { width: 26px; height: 26px; }
 .burger-btn { display: none; width: 40px; height: 40px; flex-direction: column; align-items: center; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; border-radius: 8px; }
 .burger-btn span { display: block; width: 22px; height: 2px; background: #1a1a1a; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
 .burger-btn.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
@@ -312,7 +312,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; colo
   .footer-content { grid-template-columns: 1fr 1fr; }
   .nav { display: none; }
   .header-contacts { display: none; }
-  .header-max { display: inline-flex; }
+  .header-call { display: inline-flex; }
   .burger-btn { display: flex; }
   .section-title { font-size: 36px; }
   .consultation-banner h2 { font-size: 32px; }
@@ -633,4 +633,34 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; colo
 @media (max-width: 768px) {
   .social-button-max { display: inline-flex; }
   .social-button-vk { display: none; }
+}
+
+/* Floating MAX button */
+.fab-max { position: fixed; right: 20px; bottom: 20px; z-index: 1500; width: 66px; height: 66px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.2); text-decoration: none; animation: fabJump 20s ease-in-out infinite; }
+.fab-max::before { content: ''; position: absolute; inset: 0; border-radius: 50%; z-index: -1; animation: fabPulse 2.5s ease-out infinite; }
+.fab-max-icon { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; display: block; }
+.fab-max-bubble { position: absolute; right: calc(100% + 14px); top: 50%; transform: translateY(-50%) scale(0.8); transform-origin: right center; background: #0F766E; color: #fff; font-size: 14px; font-weight: 700; padding: 10px 14px; border-radius: 14px; white-space: nowrap; opacity: 0; pointer-events: none; box-shadow: 0 6px 18px rgba(0,0,0,0.18); animation: fabBubble 20s ease-in-out infinite; }
+.fab-max-bubble::after { content: ''; position: absolute; left: 100%; top: 50%; transform: translateY(-50%); border: 7px solid transparent; border-left-color: #0F766E; }
+@keyframes fabJump {
+  0%, 74% { transform: translateY(0) scale(1); }
+  76% { transform: translateY(-9px) scale(1.06); }
+  78% { transform: translateY(0) scale(0.98); }
+  80% { transform: translateY(-5px) scale(1.03); }
+  82%, 100% { transform: translateY(0) scale(1); }
+}
+@keyframes fabPulse {
+  0% { box-shadow: 0 0 0 0 rgba(124,58,237,0.45); }
+  70% { box-shadow: 0 0 0 18px rgba(124,58,237,0); }
+  100% { box-shadow: 0 0 0 0 rgba(124,58,237,0); }
+}
+@keyframes fabBubble {
+  0%, 80% { opacity: 0; transform: translateY(-50%) scale(0.8); }
+  83% { opacity: 1; transform: translateY(-50%) scale(1.06); }
+  85%, 94% { opacity: 1; transform: translateY(-50%) scale(1); }
+  100% { opacity: 0; transform: translateY(-50%) scale(0.9); }
+}
+@media (max-width: 768px) {
+  .fab-max { right: 16px; bottom: 16px; width: 58px; height: 58px; }
+  .fab-max-icon { width: 42px; height: 42px; }
+  .fab-max-bubble { font-size: 13px; padding: 9px 12px; }
 }

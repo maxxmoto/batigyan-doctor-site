@@ -180,8 +180,8 @@ function App() {
               </a>
             </div>
           </div>
-          <a href={MAX_URL} className="header-max" aria-label="MAX" target="_blank" rel="noopener noreferrer">
-            <img src={pub('/max.webp')} alt="MAX" />
+          <a href="tel:+79604593383" className="header-call" aria-label="Позвонить: +7 960 459-33-83">
+            <PhoneIcon />
           </a>
           <a
             href="#"
@@ -942,6 +942,17 @@ function App() {
           </div>
         </div>
       )}
+
+      <a
+        href={MAX_URL}
+        className="fab-max"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Написать в MAX"
+      >
+        <span className="fab-max-bubble">Напишите мне!</span>
+        <img src={pub('/max.webp')} alt="" className="fab-max-icon" />
+      </a>
 
       <CookieBanner />
     </div>

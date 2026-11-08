@@ -41,6 +41,7 @@ const SERVICE_IMAGES = {
 
 const TELEGRAM_URL = 'https://t.me/batigyan_endo';
 const MAX_URL = 'https://max.ru/u/f9LHodD0cOJPGilNyVfMv0n0R3AXhpbzTFuuaHeTdcWnMgAvEP31w_zxEZQ';
+const PRODOCTOROV_REVIEWS_URL = 'https://prodoctorov.ru/rostov-na-donu/vrach/640407-batigyan/otzivi/#tab-content';
 
 function telegramLink(topic?: string | null) {
   const message = topic
@@ -725,42 +726,138 @@ function App() {
           <div className="reviews-marquee">
             <div className="reviews-marquee-track">
               <div className="review-card">
-                <div className="review-stars">★★★★★</div>
+                <div className="review-head">
+                  <div className="review-stars">★★★★★</div>
+                  <a
+                    href={PRODOCTOROV_REVIEWS_URL}
+                    className="review-source"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Отзывы на ПроДокторов"
+                    title="Отзывы на ПроДокторов"
+                  >
+                    <img src={pub('/opt/prodoctorov.webp')} alt="ПроДокторов" loading="lazy" decoding="async" />
+                  </a>
+                </div>
                 <p className="review-text">Обратился для удаления полипов, которые были обнаружены при диагностике. Понравилось отношение врача, быстрота и безболезненность процедуры. Благодарю Эдуарда Арсеновича за проделанную работу!</p>
                 <div className="review-author">Пациент, 18 сентября 2026</div>
               </div>
               <div className="review-card">
-                <div className="review-stars">★★★★★</div>
+                <div className="review-head">
+                  <div className="review-stars">★★★★★</div>
+                  <a
+                    href={PRODOCTOROV_REVIEWS_URL}
+                    className="review-source"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Отзывы на ПроДокторов"
+                    title="Отзывы на ПроДокторов"
+                  >
+                    <img src={pub('/opt/prodoctorov.webp')} alt="ПроДокторов" loading="lazy" decoding="async" />
+                  </a>
+                </div>
                 <p className="review-text">Я обратился к Эдуарду Арсеновичу по рекомендации сразу нескольких медиков. Его рекомендовали как одного из лучших эндоскопистов в Ростове. И это полностью соответствует! Эдуард Арсенович и его команда все делают быстро, чётко, профессионально!</p>
                 <div className="review-author">Пациент, 4 сентября 2026</div>
               </div>
               <div className="review-card">
-                <div className="review-stars">★★★★★</div>
+                <div className="review-head">
+                  <div className="review-stars">★★★★★</div>
+                  <a
+                    href={PRODOCTOROV_REVIEWS_URL}
+                    className="review-source"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Отзывы на ПроДокторов"
+                    title="Отзывы на ПроДокторов"
+                  >
+                    <img src={pub('/opt/prodoctorov.webp')} alt="ПроДокторов" loading="lazy" decoding="async" />
+                  </a>
+                </div>
                 <p className="review-text">Обратилась к Эдуарду Арсеновичу по рекомендации знакомых. И не пожалела. Очень профессиональный, внимательный и деликатный доктор. Все прошло очень легко. По возрасту уже нужно было пройти ФГДС и колоноскопию.</p>
                 <div className="review-author">Пациент, 4 сентября 2026</div>
               </div>
               <div className="review-card">
-                <div className="review-stars">★★★★★</div>
+                <div className="review-head">
+                  <div className="review-stars">★★★★★</div>
+                  <a
+                    href={PRODOCTOROV_REVIEWS_URL}
+                    className="review-source"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Отзывы на ПроДокторов"
+                    title="Отзывы на ПроДокторов"
+                  >
+                    <img src={pub('/opt/prodoctorov.webp')} alt="ПроДокторов" loading="lazy" decoding="async" />
+                  </a>
+                </div>
                 <p className="review-text">Отдельное спасибо за четкие письменные рекомендации по подготовке. Делайте, как сказано, и будет вам счастье! Ответственно заявляю: я все прошел без сложностей, и качество моей подготовки оценили на 9 из 10.</p>
                 <div className="review-author">Пациент, 4 сентября 2026</div>
               </div>
               <div className="review-card">
-                <div className="review-stars">★★★★★</div>
+                <div className="review-head">
+                  <div className="review-stars">★★★★★</div>
+                  <a
+                    href={PRODOCTOROV_REVIEWS_URL}
+                    className="review-source"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Отзывы на ПроДокторов"
+                    title="Отзывы на ПроДокторов"
+                  >
+                    <img src={pub('/opt/prodoctorov.webp')} alt="ПроДокторов" loading="lazy" decoding="async" />
+                  </a>
+                </div>
                 <p className="review-text">Обратился для удаления полипов, которые были обнаружены при диагностике. Понравилось отношение врача, быстрота и безболезненность процедуры. Благодарю Эдуарда Арсеновича за проделанную работу!</p>
                 <div className="review-author">Пациент, 18 сентября 2026</div>
               </div>
               <div className="review-card">
-                <div className="review-stars">★★★★★</div>
+                <div className="review-head">
+                  <div className="review-stars">★★★★★</div>
+                  <a
+                    href={PRODOCTOROV_REVIEWS_URL}
+                    className="review-source"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Отзывы на ПроДокторов"
+                    title="Отзывы на ПроДокторов"
+                  >
+                    <img src={pub('/opt/prodoctorov.webp')} alt="ПроДокторов" loading="lazy" decoding="async" />
+                  </a>
+                </div>
                 <p className="review-text">Я обратился к Эдуарду Арсеновичу по рекомендации сразу нескольких медиков. Его рекомендовали как одного из лучших эндоскопистов в Ростове. И это полностью соответствует! Эдуард Арсенович и его команда все делают быстро, чётко, профессионально!</p>
                 <div className="review-author">Пациент, 4 сентября 2026</div>
               </div>
               <div className="review-card">
-                <div className="review-stars">★★★★★</div>
+                <div className="review-head">
+                  <div className="review-stars">★★★★★</div>
+                  <a
+                    href={PRODOCTOROV_REVIEWS_URL}
+                    className="review-source"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Отзывы на ПроДокторов"
+                    title="Отзывы на ПроДокторов"
+                  >
+                    <img src={pub('/opt/prodoctorov.webp')} alt="ПроДокторов" loading="lazy" decoding="async" />
+                  </a>
+                </div>
                 <p className="review-text">Обратилась к Эдуарду Арсеновичу по рекомендации знакомых. И не пожалела. Очень профессиональный, внимательный и деликатный доктор. Все прошло очень легко. По возрасту уже нужно было пройти ФГДС и колоноскопию.</p>
                 <div className="review-author">Пациент, 4 сентября 2026</div>
               </div>
               <div className="review-card">
-                <div className="review-stars">★★★★★</div>
+                <div className="review-head">
+                  <div className="review-stars">★★★★★</div>
+                  <a
+                    href={PRODOCTOROV_REVIEWS_URL}
+                    className="review-source"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Отзывы на ПроДокторов"
+                    title="Отзывы на ПроДокторов"
+                  >
+                    <img src={pub('/opt/prodoctorov.webp')} alt="ПроДокторов" loading="lazy" decoding="async" />
+                  </a>
+                </div>
                 <p className="review-text">Отдельное спасибо за четкие письменные рекомендации по подготовке. Делайте, как сказано, и будет вам счастье! Ответственно заявляю: я все прошел без сложностей, и качество моей подготовки оценили на 9 из 10.</p>
                 <div className="review-author">Пациент, 4 сентября 2026</div>
               </div>

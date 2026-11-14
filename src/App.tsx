@@ -43,6 +43,13 @@ const TELEGRAM_URL = 'https://t.me/batigyan_endo';
 const MAX_URL = 'https://max.ru/u/f9LHodD0cOJPGilNyVfMv0n0R3AXhpbzTFuuaHeTdcWnMgAvEP31w_zxEZQ';
 const PRODOCTOROV_REVIEWS_URL = 'https://prodoctorov.ru/rostov-na-donu/vrach/640407-batigyan/otzivi/#tab-content';
 
+const SERVICE_MORE = (
+  <a href={MAX_URL} className="service-card-more" target="_blank" rel="noopener noreferrer">
+    Подробнее
+    <ArrowIcon />
+  </a>
+);
+
 function telegramLink(topic?: string | null) {
   const message = topic
     ? `Здравствуйте, Эдуард Арсенович! Пишу с сайта. Меня беспокоит: ${topic}. Хочу записаться на консультацию.`
@@ -530,6 +537,7 @@ function App() {
             <div className="service-card-content">
               <h3>Лечение ожирения</h3>
               <p>Внутрижелудочное баллонное лечение ожирения. Endoscopic Sleeve Gastroplasty (ESG) — эндоскопическая рукавная гастропластика. Обучение пройдено в ОАЭ.</p>
+              {SERVICE_MORE}
             </div>
           </div>
           <div className="service-card" style={{ backgroundImage: `url(${SERVICE_IMAGES.gastroscopy})` }}>
@@ -537,6 +545,7 @@ function App() {
             <div className="service-card-content">
               <h3>Эндоскопическая диагностика</h3>
               <p>Гастроскопия, колоноскопия с применением NBI, хромоэндоскопия, увеличительная эндоскопия для ранней диагностики предопухолевых заболеваний и рака.</p>
+              {SERVICE_MORE}
             </div>
           </div>
           <div className="service-card" style={{ backgroundImage: `url(${SERVICE_IMAGES.polyps})` }}>
@@ -544,6 +553,7 @@ function App() {
             <div className="service-card-content">
               <h3>Удаление полипов и аденом</h3>
               <p>Эндоскопическое удаление полипов и аденом: холодная полипэктомия, горячая полипэктомия, резекция слизистой (EMR), эндоскопическая диссекция в подслизистом слое (ESD).</p>
+              {SERVICE_MORE}
             </div>
           </div>
           <div className="service-card" style={{ backgroundImage: `url(${SERVICE_IMAGES.colonoscopy})` }}>
@@ -551,6 +561,7 @@ function App() {
             <div className="service-card-content">
               <h3>ЭРХПГ и лечение холедохолитиаза</h3>
               <p>Эндоскопическая ретроградная панкреатохолангиография, извлечение и дробление камней в желчных протоках, методика Spyglass — холангиоскопия.</p>
+              {SERVICE_MORE}
             </div>
           </div>
           {(showAllServices || isDesktop) && (
@@ -560,6 +571,7 @@ function App() {
             <div className="service-card-content">
               <h3>Остановка кровотечений</h3>
               <p>Остановка кровотечений из верхних отделов ЖКТ и толстой кишки комбинированными методиками: инъекционные, электрохирургические, клиппирование, аргоноплазменная коагуляция.</p>
+              {SERVICE_MORE}
             </div>
           </div>
           <div className="service-card" style={{ backgroundImage: `url(${SERVICE_IMAGES.gastroplasty})` }}>
@@ -567,6 +579,7 @@ function App() {
             <div className="service-card-content">
               <h3>Стентирование и дилатация</h3>
               <p>Эндоскопическое стентирование нитиноловыми стентами при обструктивных опухолях. Бужирование и баллонная дилатация при рубцовых сужениях пищевода и кишечника.</p>
+              {SERVICE_MORE}
             </div>
           </div>
             </>
@@ -578,6 +591,7 @@ function App() {
                 <div className="service-card-content">
                   <h3>Лечение ахалазии кардии</h3>
                   <p>Пероральная эзофагомиоэктомия (ПОЭМ, POEM). Эндоскопическая крикофарингомиотомия (Z-POEM) при дивертикуле Ценкера.</p>
+                  {SERVICE_MORE}
                 </div>
               </div>
               <div className="service-card" style={{ backgroundImage: `url(${SERVICE_IMAGES.colonoscopy})` }}>
@@ -585,6 +599,7 @@ function App() {
                 <div className="service-card-content">
                   <h3>Ургентная эндоскопия</h3>
                   <p>Эндоскопическая интубация трахеи, санационная бронхоскопия. Извлечение инородных тел из верхних отделов пищеварительного тракта и трахео-бронхиального дерева.</p>
+                  {SERVICE_MORE}
                 </div>
               </div>
               <div className="service-card" style={{ backgroundImage: `url(${SERVICE_IMAGES.polyps})` }}>
@@ -592,6 +607,7 @@ function App() {
                 <div className="service-card-content">
                   <h3>Лечение пищевода Барретта</h3>
                   <p>Аргоно-плазменная коагуляция (АПК) при пищеводе Барретта. Лигирование вен пищевода при варикозном расширении.</p>
+                  {SERVICE_MORE}
                 </div>
               </div>
             </>
